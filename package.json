@@ -1,6 +1,6 @@
 {
   "name": "bot",
-   "description": "expressairbot,
+   "description": "expressairbot",
   "version": "0.0.0",
   "main": "app.js",
   "scripts": {

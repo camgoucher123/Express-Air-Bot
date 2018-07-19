@@ -1,0 +1,12 @@
+{
+  "name": "bot",
+   "description": "expressairbot,
+  "version": "0.0.0",
+  "main": "app.js",
+  "scripts": {
+     "start": "node app.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}

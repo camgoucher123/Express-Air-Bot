@@ -87,7 +87,7 @@ client.login(process.env.BOT_TOKEN);
 //roblox stuff under here
 var roblox = require('roblox-js');
 
-roblox.login({username: "ExpressAirBot", password: "expressair"}).then((success) => {
+roblox.login({username: "process.env.BOT_USERNAME", password: "process.env.BOT_PASSWORD"}).then((success) => {
 
 }).catch(() => {console.log("Failed to login.");})
 

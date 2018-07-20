@@ -54,14 +54,14 @@ client.on('message', message => {
 
   }]
    }})
- if(message.member.roles.find("name", "Camgoucher123")){
+ if(message.member.roles.find("name", "HR")){
    message.author.send({embed: {
      color: 3447003,
      title: "Moderation Commands",
      description: "All commands must begin with the prefix (\')",
      fields: [{
-    name: "Shout (IN DEVELOPMENT, DOES NOT WORK)",
-    value: "Shout something to the group! -shout [message]"
+    name: "Shout",
+    value: "Shout something to the group! 'shout [message]"
   },
   {
     name:"???",
@@ -83,3 +83,42 @@ message.reply("The definition for, " + args[1] + ' is this: http://www.urbandict
 });
 
 client.login(process.env.BOT_TOKEN);
+
+//roblox stuff under here
+var roblox = require('roblox-js');
+
+roblox.login({username: "ExpressAirBot", password: "expressair"}).then((success) => {
+
+}).catch(() => {console.log("Failed to login.");})
+
+var groupId = "3761375"
+
+
+ function isCommand(command, message){
+   if (message.channel.type === "dm"){
+     message.channel.send("Please use the Express Air Discord for commands")
+     return
+   }};
+
+
+ client.on('message', (message) => {
+ 	if (message.author.bot) return;
+       var args = message.content.split(' ');
+       var argsresult = args.join(' ');
+
+     if(message.content.startsWith(prefix + 'shout')){
+	 if(message.member.roles.find("name", "HR")){
+    	var shout = args[1]
+     	if (shout){
+     	roblox.shout(groupId,argsresult.slice(6))
+         message.reply("shouted the message:" + argsresult.slice(6))
+		}else{
+
+	message.reply("You must provide something to shout!")
+  	return
+	}
+} else{
+message.reply("No permissions.")}}
+
+ });
+

@@ -54,18 +54,18 @@ client.on('message', message => {
 
   }]
    }})
- if(message.member.roles.find("name", "HR")){
+ if(message.member.roles.find("name", "Camgoucher123")){
    message.author.send({embed: {
      color: 3447003,
      title: "Moderation Commands",
      description: "All commands must begin with the prefix (\')",
      fields: [{
-    name: "Shout",
-    value: "Shout something to the group! 'shout [message]"
+    name: "flight (IN DEVELOPMENT, DOES NOT WORK)",
+    value: "Shout something to the group! -shout [message]"
   },
   {
-    name:"???",
-    value: "??? (Coming soon)"
+    name:"flight",
+    value: "Announce a flight, message sends to announcements by default."
   }
 ]
    }
@@ -73,14 +73,21 @@ client.on('message', message => {
  })}
 } else
 if(message.content.startsWith(prefix+'ping')) {
-message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`) );
+  message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`) );
 } else
 if(message.content.startsWith(prefix + 'urban')){
 let question = args[1];
 if(!question) return message.channel.send("You must provide something to search!")
 message.reply("The definition for, " + args[1] + ' is this: http://www.urbandictionary.com/define.php?term='+ args[1])
-}
+} else {
+if(message.content.startsWith(prefix+'flight')){
+ if(message.member.roles.find("name", "HR")){
+   message.channel.guild.channels.get("427891589042667530").send("@everyone Flight! Join the airport! @ https://www.roblox.com/games/1749175903/Ennex-County-International-Airport")
+}else
+  message.reply("No permissions.")
+}}
 });
+
 
 client.login(process.env.BOT_TOKEN);
 

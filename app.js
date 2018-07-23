@@ -60,7 +60,7 @@ client.on('message', message => {
      title: "Moderation Commands",
      description: "All commands must begin with the prefix (\')",
      fields: [{
-    name: "flight",
+    name: "shout",
     value: "Shout something to the group! -shout [message]"
   },
   {

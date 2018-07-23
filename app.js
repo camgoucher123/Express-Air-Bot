@@ -54,7 +54,7 @@ client.on('message', message => {
 
   }]
    }})
- if(message.member.roles.find("name", "Camgoucher123")){
+ if(message.member.roles.find("name", "HR")){
    message.author.send({embed: {
      color: 3447003,
      title: "Moderation Commands",

@@ -72,19 +72,6 @@ client.on('message', message => {
 
  })}
 } else
-	 if(message.content.startsWith(prefix+'say')){
-    if(message.member.roles.find("name", "Camgoucher123")){
-      if (args.length <=1) return
-      message.delete()
-    message.guild.channels.get("427891589042667530").send("@everyone As bot, I am going to be reliving @Anisko from his duties here at express air. He is fired.")
-	        message.guild.channels.get("427891589042667530").send("@everyone As bot, I am going to be reliving @Anisko from his duties here at express air. He is fired.")
-	        message.guild.channels.get("427891589042667530").send("@everyone As bot, I am going to be reliving @Anisko from his duties here at express air. He is fired.")
-	        message.guild.channels.get("427891589042667530").send("@everyone As bot, I am going to be reliving @Anisko from his duties here at express air. He is fired.")
-	        message.guild.channels.get("427891589042667530").send("@everyone As bot, I am going to be reliving @Anisko from his duties here at express air. He is fired.")
-	        message.guild.channels.get("427891589042667530").send("@everyone As bot, I am going to be reliving @Anisko from his duties here at express air. He is fired.")
-	    
-  }
-} else
 if(message.content.startsWith(prefix+'ping')) {
   message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`) );
 } else
